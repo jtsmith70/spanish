@@ -24,6 +24,7 @@
             <button class="tab-btn" data-tab="stories">Stories & Conversations</button>
             <button class="tab-btn" data-tab="pasttense">Past Tense</button>
             <button class="tab-btn" data-tab="futuretense">Future Tense</button>
+            <button class="tab-btn" data-tab="speaking">Speaking Practice</button>
             <button class="tab-btn" data-tab="stats">Statistics</button>
         </nav>
 
@@ -151,6 +152,52 @@
                     <div class="practice-question" id="futureTensePracticeQuestion"></div>
                     <div class="practice-answer" id="futureTensePracticeAnswer"></div>
                     <button class="btn btn-primary" id="nextFutureTensePracticeBtn">Next Question</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Speaking Practice Tab -->
+        <div class="tab-content" id="speaking">
+            <div class="speaking-container">
+                <div class="speaking-intro">
+                    <h2>🎤 Speaking Practice</h2>
+                    <p>Practice speaking Spanish with your voice! Click the microphone button and speak your answer to the prompts.</p>
+                    <p class="browser-warning" id="browserWarning" style="display: none;">
+                        ⚠️ Voice recognition may not be available in all browsers. Try Chrome, Edge, or Safari for best results.
+                    </p>
+                </div>
+                
+                <div class="speaking-practice-card">
+                    <div class="conversation-scenario" id="conversationScenario">
+                        <h3>Select a Practice Scenario</h3>
+                        <div class="scenario-buttons" id="scenarioButtons"></div>
+                    </div>
+                    
+                    <div class="conversation-practice" id="conversationPractice" style="display: none;">
+                        <div class="conversation-prompt">
+                            <h3 id="currentPrompt"></h3>
+                            <p class="prompt-hint" id="promptHint"></p>
+                            <button class="btn btn-primary" id="hearPromptBtn">🔊 Hear Prompt</button>
+                        </div>
+                        
+                        <div class="voice-recording">
+                            <button class="btn btn-record" id="recordBtn">
+                                <span class="mic-icon">🎤</span>
+                                <span class="btn-text">Click to Speak</span>
+                            </button>
+                            <div class="recording-status" id="recordingStatus"></div>
+                        </div>
+                        
+                        <div class="your-response" id="yourResponse">
+                            <h4>Your Response:</h4>
+                            <div class="response-text" id="responseText">-</div>
+                        </div>
+                        
+                        <div class="conversation-controls">
+                            <button class="btn btn-secondary" id="nextPromptBtn" style="display: none;">Next Prompt</button>
+                            <button class="btn btn-secondary" id="newScenarioBtn">New Scenario</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
