@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macu's Spanish Learning App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Macu's Spanish Learning App</h1>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <p class="progress-text">Progress: <span id="progressText">0%</span></p>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="vocabulary">Vocabulary</button>
+            <button class="tab-btn" data-tab="practice">Practice</button>
+            <button class="tab-btn" data-tab="phrases">Common Phrases</button>
+            <button class="tab-btn" data-tab="stories">Stories & Conversations</button>
+            <button class="tab-btn" data-tab="pasttense">Past Tense</button>
+            <button class="tab-btn" data-tab="futuretense">Future Tense</button>
+            <button class="tab-btn" data-tab="stats">Statistics</button>
+        </nav>
+
+        <!-- Vocabulary Tab -->
+        <div class="tab-content active" id="vocabulary">
+            <div class="flashcard-container">
+                <div class="flashcard" id="flashcard">
+                    <div class="flashcard-front">
+                        <h2 id="spanishWord">Click "Start" to begin</h2>
+                        <button id="pronounceBtn" class="btn-pronounce" title="Pronounce">🔊</button>
+                        <p class="hint">Click to flip</p>
+                    </div>
+                    <div class="flashcard-back">
+                        <h2 id="englishWord"></h2>
+                        <p id="exampleSentence"></p>
+                        <button id="pronounceExampleBtn" class="btn-pronounce" title="Pronounce example">🔊 Example</button>
+                    </div>
+                </div>
+                <div class="flashcard-controls">
+                    <button id="prevBtn" class="btn btn-secondary">← Previous</button>
+                    <button id="nextBtn" class="btn btn-primary">Next →</button>
+                </div>
+                <div class="flashcard-actions">
+                    <button id="knowBtn" class="btn btn-success">I Know This ✓</button>
+                    <button id="dontKnowBtn" class="btn btn-danger">Need Practice ✗</button>
+                </div>
+                <div class="word-counter">
+                    <span id="wordCounter">0 / 0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Practice Tab -->
+        <div class="tab-content" id="practice">
+            <div class="practice-container">
+                <div class="question-card">
+                    <h3 id="questionText">Ready to practice?</h3>
+                    <div id="questionContent"></div>
+                    <div id="answerOptions" class="answer-options"></div>
+                    <div id="practiceFeedback" class="feedback"></div>
+                </div>
+                <div class="practice-controls">
+                    <button id="startPracticeBtn" class="btn btn-primary">Start Practice</button>
+                    <button id="nextQuestionBtn" class="btn btn-primary" style="display: none;">Next Question</button>
+                </div>
+                <div class="practice-stats">
+                    <p>Score: <span id="practiceScore">0</span> / <span id="totalQuestions">0</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Common Phrases Tab -->
+        <div class="tab-content" id="phrases">
+            <div class="phrases-container">
+                <div class="phrases-grid" id="phrasesGrid"></div>
+            </div>
+        </div>
+
+        <!-- Stories & Conversations Tab -->
+        <div class="tab-content" id="stories">
+            <div class="stories-container">
+                <div class="stories-selector">
+                    <button class="story-type-btn active" data-type="stories">Short Stories</button>
+                    <button class="story-type-btn" data-type="conversations">Conversations</button>
+                </div>
+                <div class="stories-list" id="storiesList"></div>
+                <div class="story-viewer" id="storyViewer" style="display: none;">
+                    <button class="btn btn-secondary" id="backToListBtn">← Back to List</button>
+                    <div class="story-content">
+                        <h2 id="storyTitle"></h2>
+                        <div class="story-controls">
+                            <button class="btn btn-primary" id="playStoryBtn">🔊 Play Story</button>
+                            <button class="btn btn-secondary" id="pauseStoryBtn" style="display: none;">⏸ Pause</button>
+                            <button class="btn btn-secondary" id="stopStoryBtn" style="display: none;">⏹ Stop</button>
+                        </div>
+                        <div class="story-text" id="storyText"></div>
+                        <div class="story-translation" id="storyTranslation"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Past Tense Tab -->
+        <div class="tab-content" id="pasttense">
+            <div class="pasttense-container">
+                <div class="tense-selector">
+                    <button class="tense-type-btn active" data-type="preterite">Pretérito (Simple Past)</button>
+                    <button class="tense-type-btn" data-type="imperfect">Imperfecto (Past Continuous)</button>
+                </div>
+                <div class="tense-explanation" id="tenseExplanation"></div>
+                <div class="verb-conjugations" id="verbConjugations"></div>
+                <div class="tense-examples" id="tenseExamples"></div>
+                <div class="tense-practice" id="tensePractice">
+                    <h3>Practice Exercise</h3>
+                    <div class="practice-question" id="tensePracticeQuestion"></div>
+                    <div class="practice-answer" id="tensePracticeAnswer"></div>
+                    <button class="btn btn-primary" id="nextTensePracticeBtn">Next Question</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Future Tense Tab -->
+        <div class="tab-content" id="futuretense">
+            <div class="pasttense-container">
+                <div class="tense-selector">
+                    <button class="tense-type-btn-future active" data-type="simple">Simple Future</button>
+                    <button class="tense-type-btn-future" data-type="ir">Ir + a + Infinitive</button>
+                </div>
+                <div class="tense-explanation" id="futureTenseExplanation"></div>
+                <div class="verb-conjugations" id="futureVerbConjugations"></div>
+                <div class="tense-examples" id="futureTenseExamples"></div>
+                <div class="tense-practice" id="futureTensePractice">
+                    <h3>Practice Exercise</h3>
+                    <div class="practice-question" id="futureTensePracticeQuestion"></div>
+                    <div class="practice-answer" id="futureTensePracticeAnswer"></div>
+                    <button class="btn btn-primary" id="nextFutureTensePracticeBtn">Next Question</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistics Tab -->
+        <div class="tab-content" id="stats">
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h3>Words Learned</h3>
+                    <p class="stat-number" id="wordsLearned">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Practice Score</h3>
+                    <p class="stat-number" id="practiceScoreStat">0%</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Words to Review</h3>
+                    <p class="stat-number" id="wordsToReview">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Practice</h3>
+                    <p class="stat-number" id="totalPractice">0</p>
+                </div>
+                <button id="resetStatsBtn" class="btn btn-danger">Reset Progress</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
