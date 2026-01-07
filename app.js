@@ -87,6 +87,135 @@ const commonPhrases = [
     { spanish: "¡Salud!", english: "Bless you!/Cheers!" }
 ];
 
+// Spanish-English Cognates (Words Similar to English)
+const cognates = [
+    { spanish: "hospital", english: "hospital", category: "Medical" },
+    { spanish: "animal", english: "animal", category: "Nature" },
+    { spanish: "perfecto", english: "perfect", category: "Adjectives" },
+    { spanish: "importante", english: "important", category: "Adjectives" },
+    { spanish: "interesante", english: "interesting", category: "Adjectives" },
+    { spanish: "diferente", english: "different", category: "Adjectives" },
+    { spanish: "similar", english: "similar", category: "Adjectives" },
+    { spanish: "popular", english: "popular", category: "Adjectives" },
+    { spanish: "normal", english: "normal", category: "Adjectives" },
+    { spanish: "especial", english: "special", category: "Adjectives" },
+    { spanish: "general", english: "general", category: "Adjectives" },
+    { spanish: "personal", english: "personal", category: "Adjectives" },
+    { spanish: "nacional", english: "national", category: "Adjectives" },
+    { spanish: "internacional", english: "international", category: "Adjectives" },
+    { spanish: "natural", english: "natural", category: "Adjectives" },
+    { spanish: "cultural", english: "cultural", category: "Adjectives" },
+    { spanish: "musical", english: "musical", category: "Adjectives" },
+    { spanish: "social", english: "social", category: "Adjectives" },
+    { spanish: "local", english: "local", category: "Adjectives" },
+    { spanish: "central", english: "central", category: "Adjectives" },
+    { spanish: "información", english: "information", category: "Nouns" },
+    { spanish: "nación", english: "nation", category: "Nouns" },
+    { spanish: "acción", english: "action", category: "Nouns" },
+    { spanish: "educación", english: "education", category: "Nouns" },
+    { spanish: "situación", english: "situation", category: "Nouns" },
+    { spanish: "organización", english: "organization", category: "Nouns" },
+    { spanish: "comunicación", english: "communication", category: "Nouns" },
+    { spanish: "presentación", english: "presentation", category: "Nouns" },
+    { spanish: "celebración", english: "celebration", category: "Nouns" },
+    { spanish: "preparación", english: "preparation", category: "Nouns" },
+    { spanish: "televisión", english: "television", category: "Nouns" },
+    { spanish: "decisión", english: "decision", category: "Nouns" },
+    { spanish: "visión", english: "vision", category: "Nouns" },
+    { spanish: "profesión", english: "profession", category: "Nouns" },
+    { spanish: "universidad", english: "university", category: "Nouns" },
+    { spanish: "ciudad", english: "city", category: "Nouns" },
+    { spanish: "libertad", english: "liberty/freedom", category: "Nouns" },
+    { spanish: "oportunidad", english: "opportunity", category: "Nouns" },
+    { spanish: "posibilidad", english: "possibility", category: "Nouns" },
+    { spanish: "calidad", english: "quality", category: "Nouns" },
+    { spanish: "cantidad", english: "quantity", category: "Nouns" },
+    { spanish: "actividad", english: "activity", category: "Nouns" },
+    { spanish: "electricidad", english: "electricity", category: "Nouns" },
+    { spanish: "radio", english: "radio", category: "Nouns" },
+    { spanish: "video", english: "video", category: "Nouns" },
+    { spanish: "estudio", english: "study", category: "Nouns" },
+    { spanish: "momento", english: "moment", category: "Nouns" },
+    { spanish: "problema", english: "problem", category: "Nouns" },
+    { spanish: "sistema", english: "system", category: "Nouns" },
+    { spanish: "clima", english: "climate", category: "Nouns" },
+    { spanish: "programa", english: "program", category: "Nouns" },
+    { spanish: "planeta", english: "planet", category: "Nouns" },
+    { spanish: "restaurante", english: "restaurant", category: "Nouns" },
+    { spanish: "hotel", english: "hotel", category: "Nouns" },
+    { spanish: "banco", english: "bank", category: "Nouns" },
+    { spanish: "museo", english: "museum", category: "Nouns" },
+    { spanish: "teatro", english: "theater", category: "Nouns" },
+    { spanish: "centro", english: "center", category: "Nouns" },
+    { spanish: "control", english: "control", category: "Nouns" },
+    { spanish: "grupo", english: "group", category: "Nouns" },
+    { spanish: "tipo", english: "type", category: "Nouns" },
+    { spanish: "mapa", english: "map", category: "Nouns" },
+    { spanish: "idea", english: "idea", category: "Nouns" },
+    { spanish: "foto", english: "photo", category: "Nouns" },
+    { spanish: "auto", english: "auto/car", category: "Nouns" },
+    { spanish: "taxi", english: "taxi", category: "Nouns" },
+    { spanish: "bus", english: "bus", category: "Nouns" },
+    { spanish: "teléfono", english: "telephone", category: "Nouns" },
+    { spanish: "computadora", english: "computer", category: "Nouns" },
+    { spanish: "internet", english: "internet", category: "Nouns" },
+    { spanish: "email", english: "email", category: "Nouns" },
+    { spanish: "fútbol", english: "football/soccer", category: "Nouns" },
+    { spanish: "básquetbol", english: "basketball", category: "Nouns" },
+    { spanish: "tenis", english: "tennis", category: "Nouns" },
+    { spanish: "golf", english: "golf", category: "Nouns" },
+    { spanish: "jazz", english: "jazz", category: "Nouns" },
+    { spanish: "rock", english: "rock", category: "Nouns" },
+    { spanish: "blues", english: "blues", category: "Nouns" },
+    { spanish: "café", english: "coffee", category: "Nouns" },
+    { spanish: "chocolate", english: "chocolate", category: "Nouns" },
+    { spanish: "pizza", english: "pizza", category: "Nouns" },
+    { spanish: "sandwich", english: "sandwich", category: "Nouns" },
+    { spanish: "hot dog", english: "hot dog", category: "Nouns" },
+    { spanish: "hamburguesa", english: "hamburger", category: "Nouns" },
+    { spanish: "doctor", english: "doctor", category: "Professions" },
+    { spanish: "profesor", english: "professor", category: "Professions" },
+    { spanish: "actor", english: "actor", category: "Professions" },
+    { spanish: "director", english: "director", category: "Professions" },
+    { spanish: "autor", english: "author", category: "Professions" },
+    { spanish: "editor", english: "editor", category: "Professions" },
+    { spanish: "dentista", english: "dentist", category: "Professions" },
+    { spanish: "artista", english: "artist", category: "Professions" },
+    { spanish: "periodista", english: "journalist", category: "Professions" },
+    { spanish: "turista", english: "tourist", category: "Professions" },
+    { spanish: "estudiante", english: "student", category: "Professions" },
+    { spanish: "asistente", english: "assistant", category: "Professions" },
+    { spanish: "presidente", english: "president", category: "Professions" },
+    { spanish: "cliente", english: "client", category: "Professions" },
+    { spanish: "presente", english: "present", category: "Adjectives" },
+    { spanish: "ausente", english: "absent", category: "Adjectives" },
+    { spanish: "inteligente", english: "intelligent", category: "Adjectives" },
+    { spanish: "excelente", english: "excellent", category: "Adjectives" },
+    { spanish: "independiente", english: "independent", category: "Adjectives" },
+    { spanish: "dependiente", english: "dependent", category: "Adjectives" },
+    { spanish: "permanente", english: "permanent", category: "Adjectives" },
+    { spanish: "temporal", english: "temporal", category: "Adjectives" },
+    { spanish: "original", english: "original", category: "Adjectives" },
+    { spanish: "final", english: "final", category: "Adjectives" },
+    { spanish: "formal", english: "formal", category: "Adjectives" },
+    { spanish: "informal", english: "informal", category: "Adjectives" },
+    { spanish: "legal", english: "legal", category: "Adjectives" },
+    { spanish: "ilegal", english: "illegal", category: "Adjectives" },
+    { spanish: "real", english: "real", category: "Adjectives" },
+    { spanish: "ideal", english: "ideal", category: "Adjectives" },
+    { spanish: "oficial", english: "official", category: "Adjectives" },
+    { spanish: "comercial", english: "commercial", category: "Adjectives" },
+    { spanish: "industrial", english: "industrial", category: "Adjectives" },
+    { spanish: "profesional", english: "professional", category: "Adjectives" },
+    { spanish: "tradicional", english: "traditional", category: "Adjectives" },
+    { spanish: "nacional", english: "national", category: "Adjectives" },
+    { spanish: "internacional", english: "international", category: "Adjectives" },
+    { spanish: "regional", english: "regional", category: "Adjectives" },
+    { spanish: "familiar", english: "familiar", category: "Adjectives" },
+    { spanish: "regular", english: "regular", category: "Adjectives" },
+    { spanish: "irregular", english: "irregular", category: "Adjectives" }
+];
+
 // Short Stories
 const shortStories = [
     {
@@ -597,30 +726,61 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeVocabulary();
     initializePractice();
     initializePhrases();
+    initializeCognates();
     initializeStories();
     initializePastTense();
     initializeFutureTense();
+    initializeSpeakingPractice();
     initializeStats();
     updateProgress();
 });
 
 // Tab Navigation
 function initializeTabs() {
-    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabButtons = document.querySelectorAll('.tab-btn[data-tab]');
     const tabContents = document.querySelectorAll('.tab-content');
+    const dropdownContent = document.querySelector('.dropdown-content');
 
     tabButtons.forEach(button => {
-        button.addEventListener('click', () => {
+        button.addEventListener('click', (e) => {
             const targetTab = button.getAttribute('data-tab');
             
+            if (!targetTab) return; // Skip if no data-tab attribute
+            
             // Remove active class from all buttons and contents
-            tabButtons.forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-btn[data-tab]').forEach(btn => btn.classList.remove('active'));
             tabContents.forEach(content => content.classList.remove('active'));
             
             // Add active class to clicked button and corresponding content
             button.classList.add('active');
-            document.getElementById(targetTab).classList.add('active');
+            const targetContent = document.getElementById(targetTab);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+            
+            // Close dropdown if open
+            if (dropdownContent) {
+                dropdownContent.classList.remove('show');
+            }
         });
+    });
+    
+    // Handle dropdown button click
+    const dropdownBtn = document.querySelector('.dropdown-btn');
+    if (dropdownBtn) {
+        dropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (dropdownContent) {
+                dropdownContent.classList.toggle('show');
+            }
+        });
+    }
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (dropdownContent && !e.target.closest('.tab-dropdown')) {
+            dropdownContent.classList.remove('show');
+        }
     });
 }
 
@@ -780,7 +940,10 @@ function generateTranslationQuestion() {
     const feedback = document.getElementById('practiceFeedback');
     
     questionText.textContent = "What does this word mean?";
-    questionContent.textContent = randomWord.spanish;
+    questionContent.innerHTML = `
+        <span class="practice-word">${randomWord.spanish}</span>
+        <button class="btn-pronounce-practice" onclick="pronounceWord('${randomWord.spanish}')" title="Pronounce">🔊</button>
+    `;
     answerOptions.innerHTML = '';
     feedback.textContent = '';
     feedback.className = 'feedback';
@@ -797,7 +960,7 @@ function generateTranslationQuestion() {
     allAnswers.forEach(answer => {
         const option = document.createElement('div');
         option.className = 'answer-option';
-        option.textContent = answer;
+        option.innerHTML = `<span>${answer}</span>`;
         option.addEventListener('click', () => checkAnswer(answer === randomWord.english, randomWord.english));
         answerOptions.appendChild(option);
     });
@@ -813,7 +976,9 @@ function generateMultipleChoiceQuestion() {
     const feedback = document.getElementById('practiceFeedback');
     
     questionText.textContent = "Choose the correct Spanish word:";
-    questionContent.textContent = randomWord.english;
+    questionContent.innerHTML = `
+        <span class="practice-word">${randomWord.english}</span>
+    `;
     answerOptions.innerHTML = '';
     feedback.textContent = '';
     feedback.className = 'feedback';
@@ -830,7 +995,10 @@ function generateMultipleChoiceQuestion() {
     allAnswers.forEach(answer => {
         const option = document.createElement('div');
         option.className = 'answer-option';
-        option.textContent = answer;
+        option.innerHTML = `
+            <span>${answer}</span>
+            <button class="btn-pronounce-option" onclick="event.stopPropagation(); pronounceWord('${answer}')" title="Pronounce">🔊</button>
+        `;
         option.addEventListener('click', () => checkAnswer(answer === randomWord.spanish, randomWord.spanish));
         answerOptions.appendChild(option);
     });
@@ -873,6 +1041,63 @@ function nextPracticeQuestion() {
     feedback.textContent = '';
     feedback.className = 'feedback';
     generatePracticeQuestion();
+}
+
+// Cognates Functions
+function initializeCognates() {
+    const cognatesGrid = document.getElementById('cognatesGrid');
+    cognatesGrid.innerHTML = '';
+    
+    // Group cognates by category
+    const groupedCognates = {};
+    cognates.forEach(cognate => {
+        if (!groupedCognates[cognate.category]) {
+            groupedCognates[cognate.category] = [];
+        }
+        groupedCognates[cognate.category].push(cognate);
+    });
+    
+    // Display by category
+    Object.keys(groupedCognates).sort().forEach(category => {
+        const categorySection = document.createElement('div');
+        categorySection.className = 'cognate-category';
+        categorySection.innerHTML = `<h3 class="category-title">${category}</h3>`;
+        
+        const categoryGrid = document.createElement('div');
+        categoryGrid.className = 'cognates-category-grid';
+        
+        groupedCognates[category].forEach(cognate => {
+            const cognateCard = document.createElement('div');
+            cognateCard.className = 'cognate-card';
+            const pronounceBtn = document.createElement('button');
+            pronounceBtn.className = 'btn-pronounce';
+            pronounceBtn.textContent = '🔊';
+            pronounceBtn.title = 'Pronounce';
+            pronounceBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                pronounceWord(cognate.spanish);
+            });
+            
+            cognateCard.innerHTML = `
+                <div class="cognate-content">
+                    <h4>${cognate.spanish}</h4>
+                    <p>${cognate.english}</p>
+                </div>
+            `;
+            cognateCard.appendChild(pronounceBtn);
+            
+            cognateCard.addEventListener('click', () => {
+                cognateCard.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    cognateCard.style.transform = '';
+                }, 200);
+            });
+            categoryGrid.appendChild(cognateCard);
+        });
+        
+        categorySection.appendChild(categoryGrid);
+        cognatesGrid.appendChild(categorySection);
+    });
 }
 
 // Phrases Functions
@@ -1354,6 +1579,276 @@ function generateFutureTensePractice() {
             document.getElementById('futureTensePracticeAnswer').innerHTML = feedback;
         });
     });
+}
+
+// Speaking Practice Functions
+let recognition = null;
+let isRecording = false;
+let currentScenario = null;
+let currentPromptIndex = 0;
+
+// Conversation scenarios
+const conversationScenarios = [
+    {
+        title: "Introducing Yourself",
+        description: "Practice introducing yourself in Spanish",
+        prompts: [
+            {
+                question: "¿Cómo te llamas?",
+                english: "What's your name?",
+                example: "Me llamo [tu nombre]"
+            },
+            {
+                question: "¿De dónde eres?",
+                english: "Where are you from?",
+                example: "Soy de [tu ciudad/país]"
+            },
+            {
+                question: "¿Cuántos años tienes?",
+                english: "How old are you?",
+                example: "Tengo [número] años"
+            },
+            {
+                question: "¿Qué te gusta hacer?",
+                english: "What do you like to do?",
+                example: "Me gusta [actividad]"
+            }
+        ]
+    },
+    {
+        title: "At a Restaurant",
+        description: "Practice ordering food in Spanish",
+        prompts: [
+            {
+                question: "¿Qué desea comer?",
+                english: "What would you like to eat?",
+                example: "Quiero [comida], por favor"
+            },
+            {
+                question: "¿Algo para beber?",
+                english: "Anything to drink?",
+                example: "Sí, quiero [bebida]"
+            },
+            {
+                question: "¿Cómo está la comida?",
+                english: "How is the food?",
+                example: "Está deliciosa"
+            },
+            {
+                question: "¿La cuenta, por favor?",
+                english: "The check, please?",
+                example: "Sí, aquí está"
+            }
+        ]
+    },
+    {
+        title: "Asking for Directions",
+        description: "Practice asking for and giving directions",
+        prompts: [
+            {
+                question: "¿Dónde está la estación?",
+                english: "Where is the station?",
+                example: "Está a dos calles de aquí"
+            },
+            {
+                question: "¿Cómo llego al centro?",
+                english: "How do I get to the center?",
+                example: "Camine recto y gire a la izquierda"
+            },
+            {
+                question: "¿Está muy lejos?",
+                english: "Is it very far?",
+                example: "No, está cerca"
+            },
+            {
+                question: "¿Puede repetir, por favor?",
+                english: "Can you repeat, please?",
+                example: "Claro, [repetir direcciones]"
+            }
+        ]
+    },
+    {
+        title: "Shopping",
+        description: "Practice shopping conversations",
+        prompts: [
+            {
+                question: "¿En qué puedo ayudarle?",
+                english: "How can I help you?",
+                example: "Busco [artículo]"
+            },
+            {
+                question: "¿Qué talla necesita?",
+                english: "What size do you need?",
+                example: "Talla [pequeña/mediana/grande]"
+            },
+            {
+                question: "¿Cuánto cuesta?",
+                english: "How much does it cost?",
+                example: "Cuesta [precio] euros"
+            },
+            {
+                question: "¿Tiene otro color?",
+                english: "Do you have another color?",
+                example: "Sí, tenemos [color]"
+            }
+        ]
+    },
+    {
+        title: "Daily Conversations",
+        description: "Practice everyday Spanish conversations",
+        prompts: [
+            {
+                question: "¿Cómo estás?",
+                english: "How are you?",
+                example: "Estoy bien, gracias"
+            },
+            {
+                question: "¿Qué haces?",
+                english: "What are you doing?",
+                example: "Estoy [actividad]"
+            },
+            {
+                question: "¿Tienes planes para el fin de semana?",
+                english: "Do you have plans for the weekend?",
+                example: "Sí, voy a [actividad]"
+            },
+            {
+                question: "¿Te gusta la música?",
+                english: "Do you like music?",
+                example: "Sí, me gusta mucho"
+            }
+        ]
+    }
+];
+
+function initializeSpeakingPractice() {
+    // Check for browser support
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    
+    if (!SpeechRecognition) {
+        document.getElementById('browserWarning').style.display = 'block';
+    } else {
+        recognition = new SpeechRecognition();
+        recognition.lang = 'es-ES';
+        recognition.continuous = false;
+        recognition.interimResults = false;
+        
+        recognition.onstart = () => {
+            isRecording = true;
+            document.getElementById('recordBtn').classList.add('recording');
+            document.getElementById('recordBtn').querySelector('.btn-text').textContent = 'Listening...';
+            document.getElementById('recordingStatus').textContent = '🎤 Listening...';
+            document.getElementById('recordingStatus').className = 'recording-status active';
+        };
+        
+        recognition.onresult = (event) => {
+            const transcript = event.results[0][0].transcript;
+            document.getElementById('responseText').textContent = transcript;
+            document.getElementById('recordingStatus').textContent = '✓ Recorded';
+            document.getElementById('recordingStatus').className = 'recording-status success';
+            document.getElementById('nextPromptBtn').style.display = 'inline-block';
+        };
+        
+        recognition.onerror = (event) => {
+            console.error('Speech recognition error:', event.error);
+            document.getElementById('recordingStatus').textContent = 'Error: ' + event.error;
+            document.getElementById('recordingStatus').className = 'recording-status error';
+            resetRecordingButton();
+        };
+        
+        recognition.onend = () => {
+            isRecording = false;
+            resetRecordingButton();
+        };
+    }
+    
+    // Initialize scenario buttons
+    const scenarioButtons = document.getElementById('scenarioButtons');
+    conversationScenarios.forEach((scenario, index) => {
+        const btn = document.createElement('button');
+        btn.className = 'btn btn-primary scenario-btn';
+        btn.innerHTML = `
+            <strong>${scenario.title}</strong><br>
+            <small>${scenario.description}</small>
+        `;
+        btn.addEventListener('click', () => startScenario(index));
+        scenarioButtons.appendChild(btn);
+    });
+    
+    // Event listeners
+    document.getElementById('recordBtn').addEventListener('click', startRecording);
+    document.getElementById('nextPromptBtn').addEventListener('click', nextPrompt);
+    document.getElementById('newScenarioBtn').addEventListener('click', () => {
+        document.getElementById('conversationPractice').style.display = 'none';
+        document.getElementById('conversationScenario').style.display = 'block';
+        currentScenario = null;
+        currentPromptIndex = 0;
+    });
+    document.getElementById('hearPromptBtn').addEventListener('click', () => {
+        if (currentScenario && currentScenario.prompts[currentPromptIndex]) {
+            pronounceWord(currentScenario.prompts[currentPromptIndex].question);
+        }
+    });
+}
+
+function startScenario(index) {
+    currentScenario = conversationScenarios[index];
+    currentPromptIndex = 0;
+    document.getElementById('conversationScenario').style.display = 'none';
+    document.getElementById('conversationPractice').style.display = 'block';
+    showCurrentPrompt();
+}
+
+function showCurrentPrompt() {
+    if (!currentScenario || !currentScenario.prompts[currentPromptIndex]) {
+        // All prompts completed
+        document.getElementById('currentPrompt').textContent = '¡Felicidades! You completed all prompts!';
+        document.getElementById('promptHint').textContent = '';
+        document.getElementById('recordBtn').style.display = 'none';
+        return;
+    }
+    
+    const prompt = currentScenario.prompts[currentPromptIndex];
+    document.getElementById('currentPrompt').textContent = prompt.question;
+    document.getElementById('promptHint').innerHTML = `
+        <strong>English:</strong> ${prompt.english}<br>
+        <strong>Example:</strong> ${prompt.example}
+    `;
+    document.getElementById('responseText').textContent = '-';
+    document.getElementById('nextPromptBtn').style.display = 'none';
+    document.getElementById('recordingStatus').textContent = '';
+    document.getElementById('recordingStatus').className = 'recording-status';
+}
+
+function startRecording() {
+    if (!recognition) {
+        alert('Speech recognition is not supported in your browser. Please try Chrome, Edge, or Safari.');
+        return;
+    }
+    
+    if (isRecording) {
+        recognition.stop();
+        return;
+    }
+    
+    try {
+        recognition.start();
+    } catch (error) {
+        console.error('Error starting recognition:', error);
+        document.getElementById('recordingStatus').textContent = 'Error starting recording';
+        document.getElementById('recordingStatus').className = 'recording-status error';
+    }
+}
+
+function resetRecordingButton() {
+    const btn = document.getElementById('recordBtn');
+    btn.classList.remove('recording');
+    btn.querySelector('.btn-text').textContent = 'Click to Speak';
+}
+
+function nextPrompt() {
+    currentPromptIndex++;
+    showCurrentPrompt();
 }
 
 function initializeStats() {
